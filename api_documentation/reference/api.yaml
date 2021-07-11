@@ -1,0 +1,35 @@
+openapi: 3.0.1
+info:
+  title: api
+  version: '1.0'
+  description: An example Open API and Express project.
+servers:
+  - url: 'http://localhost:3001'
+    description: Local
+paths:
+  /health:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: get-health
+      description: Grabs the health of the API
+  /axios-test:
+    post:
+      summary: ''
+      operationId: post-axios_test
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: object
+              examples: {}
+      description: Can be used to test axios post calls
+      parameters: []
+    parameters: []
+components:
+  schemas: {}

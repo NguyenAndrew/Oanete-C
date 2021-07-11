@@ -1,10 +1,20 @@
-# Penjar - PostgreSQL Express Node Jest Axios React
+# Penjar - PostgreSQL Express Node Jest Axios React /w Custom Resolved Operation Handlers
 
-Penjar is the fastest way to spin up a Full Stack application (React + Node) with Jest testing. Evolution and based off of the [Careen](https://github.com/NguyenAndrew/careen) stack. Now using TypeScript!
+Oanete (Pronounced: Oh neat! See!) is an Express Node TypeScript project with Custom Resolved Operation Handlers. This project uses an Open API file to describe the API, and ensure the implementation always matches that description. Custom Resolved Operation Handlers, helps developers ensure that all "operations" in the Open API file have a corresponding implementation route.
+
+For Oanete without Custom Resolved Operation Handlers, vheck the following project: https://github.com/NguyenAndrew/Oanete
+
+Useful to watch the following video, to understand the benefits of structuring a project in this format: https://www.youtube.com/watch?v=nfkppuQ-Eg0 - "Phil Sturgeon presents Design First APIs using Stoplight Studio @ PHP South Wales"
 
 ## Architecture
 
 ![Architecture](diagrams/architecture.drawio.png)
+
+## QuickStart - Updating the API
+1. Download [Stoplight Studio](https://stoplight.io/studio/) (Note: Either Mac, Windows, or Linux depending on your desktop)
+2. Using Stoplight Studio, select "Open Existing Folder", and open up this project's api_documentation folder
+3. Edit the API the way you want it to be!
+4. Update implementation code to match API (More instructions on running code below)
 
 ## QuickStart - Running Locally
 1. Navigate to the run_locally directory
@@ -12,6 +22,12 @@ Penjar is the fastest way to spin up a Full Stack application (React + Node) wit
 3. Install your dependencies with ```npm install```
 5. Run your application with ```npm run start``` (Note: `start:windows`, `start:linux`, and `start:mac` are also available)
 6. Ready to Code!
+
+## Quickstart - Import and Calling API with Postman
+1. Download [Postman App](https://www.postman.com/downloads/)
+2. Open Postman and go to File->Import->File, upload the api file located within this project's ./api_documentation/reference/api.yaml
+3. Click import
+4. Start calling the API!
 
 ## QuickStart - Running on Docker
 1. Make sure you are on the root directory
@@ -32,11 +48,3 @@ Penjar is the fastest way to spin up a Full Stack application (React + Node) wit
 5. Upgrade all dependencies with ```npm run dependup```
 6. Upgrade dependencies in your package-lock.json with ```npm install```
 7. Optional: Check to see which dependencies were not updated (due to failing tests) with ```npm run dependup:check```
-
-## Quickstart - Configuring a database / Adding environment based configuration
-1. Navigate to the back_end directory
-2. Within the "config" directory, add variables that either load in "hard coded values" or "reads from environment variables", which will be used to create the config object
-3. Optional: Using config object, you can obtain values needed to setup a database client
-
-## Roadmap
-* Add rest of tests for existing code on the back end
