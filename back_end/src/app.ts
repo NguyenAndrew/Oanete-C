@@ -30,7 +30,7 @@ app.use(
     ),
     validateResponses: true,
     operationHandlers: {
-      basePath: path.join(__dirname, 'routes'),
+      basePath: __dirname,
       resolver: (
         handlersPath: string,
         route: RouteMetadata,
@@ -40,7 +40,8 @@ app.use(
         const schema = (apiDoc.paths as any)[pathKey][route.method.toLowerCase()];
         const [method, controller] = schema['operationId'].split('-');
 
-        const modulePath = path.join(handlersPath, controller);
+        const modulePath = path.join(handlersPath, controller, 'route');
+        console.log(modulePath);
 
         const handler = require(modulePath);
       
