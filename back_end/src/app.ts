@@ -34,7 +34,7 @@ app.use(
       resolver: (
         handlersPath: string,
         route: RouteMetadata,
-        apiDoc: OpenAPIV3.Document,
+        apiDoc: OpenAPIV3.Document
       ): RequestHandler => {
         const pathKey = route.openApiRoute.substring(route.basePath.length);
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
