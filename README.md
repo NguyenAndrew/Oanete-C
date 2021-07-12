@@ -2,7 +2,7 @@
 
 Oanete (Pronounced: Oh neat see!) is an Express Node TypeScript project with Custom Resolved Operation Handlers. This project uses an Open API file to describe the API, and ensure the implementation always matches that description. Custom Resolved Operation Handlers, helps developers ensure that all "operations" in the Open API file have a corresponding implementation route.
 
-For Oanete without Custom Resolved Operation Handlers, vheck the following project: https://github.com/NguyenAndrew/Oanete
+For Oanete without Custom Resolved Operation Handlers, check the following project: https://github.com/NguyenAndrew/Oanete
 
 Useful to watch the following video, to understand the benefits of structuring a project in this format: https://www.youtube.com/watch?v=nfkppuQ-Eg0 - "Phil Sturgeon presents Design First APIs using Stoplight Studio @ PHP South Wales"
 
