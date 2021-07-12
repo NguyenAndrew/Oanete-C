@@ -37,20 +37,23 @@ app.use(
         apiDoc: OpenAPIV3.Document,
       ): RequestHandler => {
         const pathKey = route.openApiRoute.substring(route.basePath.length);
-        const schema = (apiDoc.paths as any)[pathKey][route.method.toLowerCase()];
-        const [method, controller] = schema['operationId'].split('-');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const schema = (apiDoc.paths as any)[pathKey][
+          route.method.toLowerCase()
+        ];
+        const [method, controller] = schema["operationId"].split("-");
 
-        const modulePath = path.join(handlersPath, controller, 'route');
-        console.log(modulePath);
+        const modulePath = path.join(handlersPath, controller, "route");
 
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
         const handler = require(modulePath);
-      
+
         if (handler[method] === undefined) {
           throw new Error(
-            `Could not find a [${method}] function in ${modulePath} when trying to route [${route.method} ${route.expressRoute}].`,
+            `Could not find a [${method}] function in ${modulePath} when trying to route [${route.method} ${route.expressRoute}].`
           );
         }
-      
+
         return handler[method];
       }
     }
