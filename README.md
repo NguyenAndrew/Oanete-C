@@ -1,6 +1,6 @@
 # Penjar - PostgreSQL Express Node Jest Axios React /w Custom Resolved Operation Handlers
 
-Oanete (Pronounced: Oh neat! See!) is an Express Node TypeScript project with Custom Resolved Operation Handlers. This project uses an Open API file to describe the API, and ensure the implementation always matches that description. Custom Resolved Operation Handlers, helps developers ensure that all "operations" in the Open API file have a corresponding implementation route.
+Oanete (Pronounced: Oh neat see!) is an Express Node TypeScript project with Custom Resolved Operation Handlers. This project uses an Open API file to describe the API, and ensure the implementation always matches that description. Custom Resolved Operation Handlers, helps developers ensure that all "operations" in the Open API file have a corresponding implementation route.
 
 For Oanete without Custom Resolved Operation Handlers, vheck the following project: https://github.com/NguyenAndrew/Oanete
 
@@ -9,6 +9,10 @@ Useful to watch the following video, to understand the benefits of structuring a
 ## Architecture
 
 ![Architecture](diagrams/architecture.drawio.png)
+
+## How Custom Resolved Operation Handlers work
+
+![Custom Resolved Operation Handlers](diagrams/custom-resolver.drawio.png)
 
 ## QuickStart - Updating the API
 1. Download [Stoplight Studio](https://stoplight.io/studio/) (Note: Either Mac, Windows, or Linux depending on your desktop)
